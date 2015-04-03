@@ -19,9 +19,9 @@
     <!-- Sidebars -->
     <div ng-include="'sidebar.html'" 
             ui-track-as-search-param='true'
-            class="sidebar sidebar-left"></div>
+            class="sidebar sidebar-left" ng-show="!showActions" ng-swipe-left="showActions = true">
 
-    <div class="app">
+    <div class="app" ng-show="showActions" ng-swipe-right="showActions = false">
 
       <!-- Navbars -->
 
